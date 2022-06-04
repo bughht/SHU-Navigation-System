@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_288789ba80aa4f8bb05f56fb52c3d077 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_288789ba80aa4f8bb05f56fb52c3d077" ></div>
+        
+</body>
+<script>    
+    
+            var map_288789ba80aa4f8bb05f56fb52c3d077 = L.map(
+                "map_288789ba80aa4f8bb05f56fb52c3d077",
+                {
+                    center: [31.3182, 121.3895],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[31.3098, 121.3817], [31.3235, 121.3973]],
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_288789ba80aa4f8bb05f56fb52c3d077);
+
+            
+
+        
+    
+            var tile_layer_620340aa78c5494fb7ccede1bd701e56 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 16, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_288789ba80aa4f8bb05f56fb52c3d077);
+        
+    
+            var mouse_position_cdb4e4260faf4851973b151cd36d1173 = new L.Control.MousePosition(
+                {"emptyString": "NaN", "lngFirst": true, "numDigits": 20, "position": "topright", "prefix": "Coordinates:", "separator": " | "}
+            );
+            mouse_position_cdb4e4260faf4851973b151cd36d1173.options["latFormatter"] =
+                function(num) {return L.Util.formatNum(num, 5) + ' º ';};;
+            mouse_position_cdb4e4260faf4851973b151cd36d1173.options["lngFormatter"] =
+                function(num) {return L.Util.formatNum(num, 5) + ' º ';};;
+            map_288789ba80aa4f8bb05f56fb52c3d077.addControl(mouse_position_cdb4e4260faf4851973b151cd36d1173);
+        
+    
+            var tile_layer_a91150953cfd4315bc7f25d450872085 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_a4bb5ecedfeb4eeda8fab2570044f20e = new L.Control.MiniMap(
+                tile_layer_a91150953cfd4315bc7f25d450872085,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -4}
+            );
+            map_288789ba80aa4f8bb05f56fb52c3d077.addControl(mini_map_a4bb5ecedfeb4eeda8fab2570044f20e);
+        
+    
+            ant_path_373bd1c5456040389dc77e1f98451a20 = L.polyline.antPath(
+              [[31.3192608, 121.3902597], [31.3198158, 121.3907106], [31.320034, 121.3908879], [31.3200402, 121.3910008], [31.3200596, 121.391354], [31.3201271, 121.3925817], [31.3201301, 121.3926291], [31.3201888, 121.39278], [31.3202316, 121.3929082], [31.3202824, 121.3938343], [31.3201434, 121.3938443], [31.318996, 121.3939275], [31.3189954, 121.3939872], [31.3189856, 121.3940154], [31.3189717, 121.3940411], [31.3189542, 121.3940636], [31.318933, 121.3940826], [31.3189093, 121.3940968], [31.3188837, 121.3941059], [31.3184988, 121.3941353], [31.3177773, 121.3941904]],
+              {"bubblingMouseEvents": true, "color": "#0000FF", "dashArray": [3, 500], "dashOffset": null, "delay": 1000, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "hardwareAcceleration": true, "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "paused": false, "pulseColor": "#FFFFFF", "reverse": false, "smoothFactor": 1.0, "stroke": true, "weight": 8}
+        ).addTo(map_288789ba80aa4f8bb05f56fb52c3d077);
+        
+    
+            ant_path_373bd1c5456040389dc77e1f98451a20.bindTooltip(
+                `<div>
+                     Path from 伟长楼 to 土木楼 by 步行
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c22c12dbd8849e0984cece922843d1e = L.marker(
+                [31.3192608, 121.3902597],
+                {"parseHtml": true}
+            ).addTo(map_288789ba80aa4f8bb05f56fb52c3d077);
+        
+    
+            var icon_81e65ca523144bdf89e8c6b915e85027 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7c22c12dbd8849e0984cece922843d1e.setIcon(icon_81e65ca523144bdf89e8c6b915e85027);
+        
+    
+        var popup_ffb8be59c89e40b58152dca036865cef = L.popup({"maxWidth": 100});
+
+        
+            var html_15ef8c5adfab4528acf7df9967da2e98 = $(`<div id="html_15ef8c5adfab4528acf7df9967da2e98" style="width: 100.0%; height: 100.0%;">Start: 伟长楼</div>`)[0];
+            popup_ffb8be59c89e40b58152dca036865cef.setContent(html_15ef8c5adfab4528acf7df9967da2e98);
+        
+
+        marker_7c22c12dbd8849e0984cece922843d1e.bindPopup(popup_ffb8be59c89e40b58152dca036865cef)
+        ;
+
+        
+    
+    
+            var marker_e63346a609304a23a2f8b1efe97a3aaa = L.marker(
+                [31.3177773, 121.3941904],
+                {"parseHtml": true}
+            ).addTo(map_288789ba80aa4f8bb05f56fb52c3d077);
+        
+    
+            var icon_d2e8553ab91947bb8cb0ce940586a23f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e63346a609304a23a2f8b1efe97a3aaa.setIcon(icon_d2e8553ab91947bb8cb0ce940586a23f);
+        
+    
+        var popup_2dbe3131a9f941feb7c5b90b6db910a2 = L.popup({"maxWidth": 100});
+
+        
+            var html_485a8ea4af8f4335a35d8d652dd392d0 = $(`<div id="html_485a8ea4af8f4335a35d8d652dd392d0" style="width: 100.0%; height: 100.0%;">End: 土木楼</div>`)[0];
+            popup_2dbe3131a9f941feb7c5b90b6db910a2.setContent(html_485a8ea4af8f4335a35d8d652dd392d0);
+        
+
+        marker_e63346a609304a23a2f8b1efe97a3aaa.bindPopup(popup_2dbe3131a9f941feb7c5b90b6db910a2)
+        ;
+
+        
+    
+</script>
